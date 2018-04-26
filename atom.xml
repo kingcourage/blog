@@ -3,11 +3,11 @@
   <title>kingcourage</title>
   
   <subtitle>wcy</subtitle>
-  <link href="/blog/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.wcy1994.com/blog/"/>
+  <link href="http://www.wcy1994.com/"/>
   <updated>2018-04-20T04:40:32.121Z</updated>
-  <id>http://www.wcy1994.com/blog/</id>
+  <id>http://www.wcy1994.com/</id>
   
   <author>
     <name>王长勇</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello MyBlog</title>
-    <link href="http://www.wcy1994.com/blog/2018/04/20/Hello-MyBlog/"/>
-    <id>http://www.wcy1994.com/blog/2018/04/20/Hello-MyBlog/</id>
+    <link href="http://www.wcy1994.com/2018/04/20/Hello-MyBlog/"/>
+    <id>http://www.wcy1994.com/2018/04/20/Hello-MyBlog/</id>
     <published>2018-04-20T04:40:32.000Z</published>
     <updated>2018-04-20T04:40:32.121Z</updated>
     
@@ -32,8 +32,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://www.wcy1994.com/blog/2018/04/20/hello-world/"/>
-    <id>http://www.wcy1994.com/blog/2018/04/20/hello-world/</id>
+    <link href="http://www.wcy1994.com/2018/04/20/hello-world/"/>
+    <id>http://www.wcy1994.com/2018/04/20/hello-world/</id>
     <published>2018-04-20T03:29:39.681Z</published>
     <updated>2018-04-20T03:29:39.681Z</updated>
     
