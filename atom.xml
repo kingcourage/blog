@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wcy1994.com/"/>
-  <updated>2018-07-06T09:43:54.674Z</updated>
+  <updated>2018-07-06T09:52:06.165Z</updated>
   <id>http://www.wcy1994.com/</id>
   
   <author>
@@ -18,19 +18,54 @@
   
   <entry>
     <title></title>
-    <link href="http://www.wcy1994.com/2018/07/06/spring%E6%89%8B%E5%8A%A8%E6%8F%90%E4%BA%A4%E4%BA%8B%E7%89%A9/"/>
-    <id>http://www.wcy1994.com/2018/07/06/spring手动提交事物/</id>
+    <link href="http://www.wcy1994.com/2018/07/06/a/"/>
+    <id>http://www.wcy1994.com/2018/07/06/a/</id>
     <published>2018-07-06T09:43:54.421Z</published>
-    <updated>2018-07-06T09:43:54.674Z</updated>
+    <updated>2018-07-06T09:52:06.165Z</updated>
     
-    <content type="html"><![CDATA[<p>首先需要注入事物管理的bean</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Autowired</span><br><span class="line">private DataSourceTransactionManager transactionManager;</span><br></pre></td></tr></table></figure><p>然后开启写自己的业务代码，提交事物</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DefaultTransactionDefinition def = new DefaultTransactionDefinition();</span><br><span class="line">def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW); // 事物隔离级别，开启新事务，这样会比较安全些。</span><br><span class="line">TransactionStatus status = transactionManager.getTransaction(def); // 获得事务状态</span><br><span class="line">try &#123;</span><br><span class="line"><span class="comment">//逻辑代码，可以写上你的逻辑处理代码</span></span><br><span class="line">transactionManager.commit(status);</span><br><span class="line">&#125; catch (Exception e) &#123;</span><br><span class="line">transactionManager.rollback(status);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>title: spring手动提交事物<br>首先需要注入事物管理的bean</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Autowired</span><br><span class="line">private DataSourceTransactionManager transactionManager;</span><br></pre></td></tr></table></figure><p>然后开启写自己的业务代码，提交事物</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DefaultTransactionDefinition def = new DefaultTransactionDefinition();</span><br><span class="line">def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW); // 事物隔离级别，开启新事务，这样会比较安全些。</span><br><span class="line">TransactionStatus status = transactionManager.getTransaction(def); // 获得事务状态</span><br><span class="line">try &#123;</span><br><span class="line"><span class="comment">//逻辑代码，可以写上你的逻辑处理代码</span></span><br><span class="line">transactionManager.commit(status);</span><br><span class="line">&#125; catch (Exception e) &#123;</span><br><span class="line">transactionManager.rollback(status);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;首先需要注入事物管理的bean&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/spa
+        &lt;p&gt;title: spring手动提交事物&lt;br&gt;首先需要注入事物管理的bean&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;s
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello MyBlog</title>
+    <link href="http://www.wcy1994.com/2018/04/20/Hello-MyBlog/"/>
+    <id>http://www.wcy1994.com/2018/04/20/Hello-MyBlog/</id>
+    <published>2018-04-20T04:40:32.000Z</published>
+    <updated>2018-04-20T04:40:32.121Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://www.wcy1994.com/2018/04/20/hello-world/"/>
+    <id>http://www.wcy1994.com/2018/04/20/hello-world/</id>
+    <published>2018-04-20T03:29:39.681Z</published>
+    <updated>2018-04-20T03:29:39.681Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
       
     
     </summary>

@@ -83,17 +83,17 @@
 
 
 
-<meta name="description" content="首先需要注入事物管理的bean 12@Autowiredprivate DataSourceTransactionManager transactionManager; 然后开启写自己的业务代码，提交事物 123456789DefaultTransactionDefinition def = new DefaultTransactionDefinition();def.setPropagation">
+<meta name="description" content="title: spring手动提交事物首先需要注入事物管理的bean 12@Autowiredprivate DataSourceTransactionManager transactionManager; 然后开启写自己的业务代码，提交事物 123456789DefaultTransactionDefinition def = new DefaultTransactionDefinition()">
 <meta property="og:type" content="article">
 <meta property="og:title" content="kingcourage">
-<meta property="og:url" content="http://www.wcy1994.com/2018/07/06/spring手动提交事物/index.html">
+<meta property="og:url" content="http://www.wcy1994.com/2018/07/06/a/index.html">
 <meta property="og:site_name" content="kingcourage">
-<meta property="og:description" content="首先需要注入事物管理的bean 12@Autowiredprivate DataSourceTransactionManager transactionManager; 然后开启写自己的业务代码，提交事物 123456789DefaultTransactionDefinition def = new DefaultTransactionDefinition();def.setPropagation">
+<meta property="og:description" content="title: spring手动提交事物首先需要注入事物管理的bean 12@Autowiredprivate DataSourceTransactionManager transactionManager; 然后开启写自己的业务代码，提交事物 123456789DefaultTransactionDefinition def = new DefaultTransactionDefinition()">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-06T09:43:54.674Z">
+<meta property="og:updated_time" content="2018-07-06T09:52:06.165Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="kingcourage">
-<meta name="twitter:description" content="首先需要注入事物管理的bean 12@Autowiredprivate DataSourceTransactionManager transactionManager; 然后开启写自己的业务代码，提交事物 123456789DefaultTransactionDefinition def = new DefaultTransactionDefinition();def.setPropagation">
+<meta name="twitter:description" content="title: spring手动提交事物首先需要注入事物管理的bean 12@Autowiredprivate DataSourceTransactionManager transactionManager; 然后开启写自己的业务代码，提交事物 123456789DefaultTransactionDefinition def = new DefaultTransactionDefinition()">
 
 
 
@@ -123,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://www.wcy1994.com/2018/07/06/spring手动提交事物/"/>
+  <link rel="canonical" href="http://www.wcy1994.com/2018/07/06/a/"/>
 
 
 
@@ -236,7 +236,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.wcy1994.com/2018/07/06/spring手动提交事物/">
+    <link itemprop="mainEntityOfPage" href="http://www.wcy1994.com/2018/07/06/a/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="王长勇">
@@ -303,7 +303,7 @@
       
 
       
-        <p>首先需要注入事物管理的bean</p>
+        <p>title: spring手动提交事物<br>首先需要注入事物管理的bean</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Autowired</span><br><span class="line">private DataSourceTransactionManager transactionManager;</span><br></pre></td></tr></table></figure>
 <p>然后开启写自己的业务代码，提交事物</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DefaultTransactionDefinition def = new DefaultTransactionDefinition();</span><br><span class="line">def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW); // 事物隔离级别，开启新事务，这样会比较安全些。</span><br><span class="line">TransactionStatus status = transactionManager.getTransaction(def); // 获得事务状态</span><br><span class="line">try &#123;</span><br><span class="line">	<span class="comment">//逻辑代码，可以写上你的逻辑处理代码</span></span><br><span class="line">	transactionManager.commit(status);</span><br><span class="line">&#125; catch (Exception e) &#123;</span><br><span class="line">	transactionManager.rollback(status);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -327,6 +327,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/20/Hello-MyBlog/" rel="next" title="Hello MyBlog">
+                <i class="fa fa-chevron-left"></i> Hello MyBlog
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
@@ -391,7 +407,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
