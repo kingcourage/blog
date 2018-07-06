@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.wcy1994.com/"/>
-  <updated>2018-07-06T09:52:06.165Z</updated>
+  <updated>2018-07-06T09:55:06.187Z</updated>
   <id>http://www.wcy1994.com/</id>
   
   <author>
@@ -17,20 +17,20 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>spring手动提交事物</title>
     <link href="http://www.wcy1994.com/2018/07/06/a/"/>
     <id>http://www.wcy1994.com/2018/07/06/a/</id>
     <published>2018-07-06T09:43:54.421Z</published>
-    <updated>2018-07-06T09:52:06.165Z</updated>
+    <updated>2018-07-06T09:55:06.187Z</updated>
     
-    <content type="html"><![CDATA[<p>title: spring手动提交事物<br>首先需要注入事物管理的bean</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Autowired</span><br><span class="line">private DataSourceTransactionManager transactionManager;</span><br></pre></td></tr></table></figure><p>然后开启写自己的业务代码，提交事物</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DefaultTransactionDefinition def = new DefaultTransactionDefinition();</span><br><span class="line">def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW); // 事物隔离级别，开启新事务，这样会比较安全些。</span><br><span class="line">TransactionStatus status = transactionManager.getTransaction(def); // 获得事务状态</span><br><span class="line">try &#123;</span><br><span class="line"><span class="comment">//逻辑代码，可以写上你的逻辑处理代码</span></span><br><span class="line">transactionManager.commit(status);</span><br><span class="line">&#125; catch (Exception e) &#123;</span><br><span class="line">transactionManager.rollback(status);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>首先需要注入事物管理的bean</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@Autowired</span><br><span class="line">private DataSourceTransactionManager transactionManager;</span><br></pre></td></tr></table></figure><p>然后开启写自己的业务代码，提交事物</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DefaultTransactionDefinition def = new DefaultTransactionDefinition();</span><br><span class="line">def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW); // 事物隔离级别，开启新事务，这样会比较安全些。</span><br><span class="line">TransactionStatus status = transactionManager.getTransaction(def); // 获得事务状态</span><br><span class="line">try &#123;</span><br><span class="line"><span class="comment">//逻辑代码，可以写上你的逻辑处理代码</span></span><br><span class="line">transactionManager.commit(status);</span><br><span class="line">&#125; catch (Exception e) &#123;</span><br><span class="line">transactionManager.rollback(status);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;title: spring手动提交事物&lt;br&gt;首先需要注入事物管理的bean&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;s
+        &lt;p&gt;首先需要注入事物管理的bean&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/spa
       
     
     </summary>
